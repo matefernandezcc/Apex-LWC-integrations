@@ -14,19 +14,19 @@
 ### **Paso 1: Clonar el Repositorio**
 
 ```bash
-git clone https://github.com/[TU_USUARIO]/vantegrate-tank-manager.git
-cd vantegrate-tank-manager
+git clone https://github.com/matefernandezcc/apex-lwc-integrations.git
+cd apex-lwc-integrations
 ```
 
 ### **Paso 2: Autenticar con Salesforce**
 
 ```bash
 # Opción A: Org existente
-sf org login web --alias VantegrateTanks
+sf org login web --alias TankManager
 
 # Opción B: Crear Scratch Org
 sf org create scratch --definition-file config/project-scratch-def.json \
-  --alias VantegrateTanks --set-default --duration-days 30
+  --alias TankManager --set-default --duration-days 30
 ```
 
 ### **Paso 3: Desplegar Metadata**
@@ -103,10 +103,10 @@ curl -o papaparse.min.js https://cdn.jsdelivr.net/npm/papaparse@5/papaparse.min.
 
 ```bash
 # Para usuario de ventas
-sf org assign permset --name Sales_User --target-org VantegrateTanks
+sf org assign permset --name Sales_User --target-org TankManager
 
 # Para usuario de mantenimiento
-sf org assign permset --name Tank_Manager --target-org VantegrateTanks
+sf org assign permset --name Tank_Manager --target-org TankManager
 ```
 
 ### **Paso 7: Crear Datos de Prueba**
@@ -114,12 +114,12 @@ sf org assign permset --name Tank_Manager --target-org VantegrateTanks
 ```bash
 # Crear Tank Type
 sf data create record --sobject Tank_Type__c --values "Name='Tanque Diesel'" \
-  --target-org VantegrateTanks
+  --target-org TankManager
 
 # Crear Tank
 sf data create record --sobject Tank__c \
   --values "Tank_Type__c=[ID_DEL_TIPO] Serial_Number__c='TANK-001' Status__c='Available' Price__c=8000 Capacity__c=5000" \
-  --target-org VantegrateTanks
+  --target-org TankManager
 ```
 
 O usar el LWC para carga masiva con `example_tanks.csv`.
@@ -170,10 +170,10 @@ Click: Activate
 ```bash
 # Ejecutar todos los tests
 sf apex run test --test-level RunLocalTests --result-format human \
-  --target-org VantegrateTanks
+  --target-org TankManager
 
 # Ver cobertura
-sf apex get test --test-run-id [ID] --code-coverage --target-org VantegrateTanks
+sf apex get test --test-run-id [ID] --code-coverage --target-org TankManager
 ```
 
 ---
@@ -206,10 +206,10 @@ sf apex get test --test-run-id [ID] --code-coverage --target-org VantegrateTanks
 **Solución:**
 ```bash
 # Ver logs detallados
-sf apex tail log --target-org VantegrateTanks
+sf apex tail log --target-org TankManager
 
 # Ejecutar test específico
-sf apex run test --tests TankLoaderControllerTest --target-org VantegrateTanks
+sf apex run test --tests TankLoaderControllerTest --target-org TankManager
 ```
 
 ---
@@ -255,7 +255,7 @@ Tu sistema de gestión de tanques está listo para usar.
 
 **¿Necesitas ayuda?**
 
-[Documentación Completa](README.md) | [Reportar Issue](https://github.com/[TU_USUARIO]/vantegrate-tank-manager/issues)
+[Documentación Completa](README.md) | [Reportar Issue](https://github.com/matefernandezcc/apex-lwc-integrations/issues)
 
 </div>
 

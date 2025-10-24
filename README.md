@@ -590,8 +590,8 @@ public class BitlyIntegrationTest {
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/[TU_USUARIO]/vantegrate-tank-manager.git
-cd vantegrate-tank-manager
+git clone https://github.com/matefernandezcc/apex-lwc-integrations.git
+cd apex-lwc-integrations
 
 # 2. Autenticar con tu org
 sf org login web
@@ -688,7 +688,7 @@ Setup → Flows → `Lead_to_Opportunity_with_Tank_Match` → Activate
 
 ## 📈 Estándares de Desarrollo Cumplidos
 
-Siguiendo los **Estándares Vantegrate:**
+Siguiendo **Salesforce Best Practices:**
 
 | Estándar | Cumplimiento |
 |----------|--------------|
@@ -727,15 +727,15 @@ Siguiendo los **Estándares Vantegrate:**
 
 ## 📄 Licencia
 
-Este proyecto fue desarrollado como ejercicio técnico para **Vantegrate**.
+MIT License - Este proyecto puede ser utilizado libremente como referencia para implementaciones en Salesforce.
 
 ---
 
 ## 🙏 Agradecimientos
 
-- Equipo de Vantegrate por la oportunidad
 - Salesforce Trailhead por los recursos educativos
-- Comunidad de Salesforce Developers
+- Salesforce Developer Community por las mejores prácticas
+- PapaParse team por la excelente librería de parsing CSV
 
 ---
 
