@@ -1,0 +1,56 @@
+# Salesforce DX
+.sfdx/
+.sf/
+.localdevserver/
+deploy-options.json
+
+# LWC Jest
+**/__tests__/**
+**/.eslintcache
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+.project
+.settings/
+
+# OS Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Salesforce cache
+.salesforce/
+*.cache
+
+# Config files
+.forceignore
+
+# Test results
+test-result*.json
+coverage/
+
+# Scratch org files
+config/
+*.org
+
+# Certificates
+*.p12
+*.key
+*.pem
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
