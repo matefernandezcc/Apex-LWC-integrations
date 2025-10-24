@@ -1,7 +1,7 @@
 # 📦 Guía de Instalación Completa
 
 ## 🎯 Requisitos Previos
-
+ 
 - [ ] Salesforce CLI instalado ([Download](https://developer.salesforce.com/tools/sfdxcli))
 - [ ] Git instalado
 - [ ] Org de Salesforce (Developer, Sandbox, o Scratch Org)
