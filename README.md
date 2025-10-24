@@ -1,6 +1,6 @@
-# 🚰 Vantegrate Tank Management System
+# 🚰 Sistema de Gestión de Tanques Industriales
 
-> Sistema completo de gestión de tanques industriales en Salesforce, desarrollado con Sales Cloud, Apex, Lightning Web Components y Flow Builder.
+> Sistema completo de gestión de ventas y mantenimiento de tanques industriales construido sobre Salesforce, utilizando Sales Cloud, Apex, Lightning Web Components, Flow Builder e integraciones con APIs externas.
 
 [![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=Salesforce&logoColor=white)](https://www.salesforce.com/)
 [![Apex](https://img.shields.io/badge/Apex-00A1E0?style=for-the-badge&logo=Salesforce&logoColor=white)](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/)
