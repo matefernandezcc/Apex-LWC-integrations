@@ -719,9 +719,9 @@ Siguiendo **Salesforce Best Practices:**
 
 **Mateo Fernández**
 
-- GitHub: [@[TU_USUARIO]](https://github.com/[TU_USUARIO])
-- LinkedIn: [Mateo Fernández](https://linkedin.com/in/[TU_PERFIL])
-- Email: matefernandezc@[DOMINIO]
+- GitHub: [@matefernandezcc](https://github.com/matefernandezcc)
+- Trailhead: [Mateo Trailhead](https://www.salesforce.com/trailblazer/matefernandezc)
+- LinkedIn: [Mateo Fernández](https://linkedin.com/in/matefernandezc)
 
 ---
 
