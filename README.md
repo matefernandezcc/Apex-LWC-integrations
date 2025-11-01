@@ -11,6 +11,7 @@
 ## 📋 Tabla de Contenidos
 
 - [Descripción del Proyecto](#-descripción-del-proyecto)
+- [Demostración](#-demostración)
 - [Arquitectura de la Solución](#-arquitectura-de-la-solución)
 - [Modelo de Datos](#-modelo-de-datos)
 - [Funcionalidades Implementadas](#-funcionalidades-implementadas)
@@ -18,7 +19,6 @@
 - [Seguridad y Permisos](#-seguridad-y-permisos)
 - [Testing y Cobertura](#-testing-y-cobertura)
 - [Instalación y Despliegue](#-instalación-y-despliegue)
-- [Demostración](#-demostración)
 - [Autor](#-autor)
 
 ---
@@ -46,6 +46,74 @@ Una empresa que vende tanques de agua industriales necesitaba:
 | **Seguridad** | Permission Sets + Field-Level Security | ✅ Completado |
 | **Testing** | 95% Code Coverage | ✅ Completado |
 | **Flow Builder** | Lead Conversion Automation | ✅ Completado |
+
+---
+
+## 🎥 Demostración
+
+### **Videos de Demostración del Sistema**
+
+Esta demo completa explica paso a paso cómo utilizar el sistema de gestión de tanques. Debido al límite de 5 minutos de Loom, la demostración se dividió en 4 partes que cubren todo el flujo del sistema.
+
+**Los videos están numerados secuencialmente y deben verse en orden:**
+
+1. **Demo - Parte 1: Usuario Mantenimiento (LWC)**
+   - [Ver video](https://www.loom.com/share/98596d1c73304a4bbf797ae55e34a62b)
+   - Explicación del componente Lightning Web Component para carga masiva de tanques, interfaz de usuario y funcionalidades del perfil de mantenimiento.
+
+2. **Demo - Parte 2: Rol de los Usuarios de Mantenimiento y Ventas**
+   - [Ver video](https://www.loom.com/share/74978e634d614d9eb1b4a758248caae0)
+   - Descripción de los diferentes perfiles de usuario (Sales User y Tank Manager), sus permisos y cómo interactúan con el sistema.
+
+3. **Demo - Parte 3: Automatización de Conversión de Leads en Ventas**
+   - [Ver video](https://www.loom.com/share/ea972e0718c948b88d60f79b65f9c097)
+   - Flujo automatizado de conversión de Leads a Opportunities, matching automático de tanques disponibles y creación de pedidos cuando no hay inventario.
+
+4. **Demo - Parte 4: Validation Rules y Flows**
+   - [Ver video](https://www.loom.com/share/ff1265f9655a4f86baf03e7cbeee247e)
+   - Validaciones implementadas en el sistema, reglas de negocio y automatizaciones con Flow Builder.
+
+**Casos de uso cubiertos en la demo:**
+- ✅ Gestión por perfiles (Sales User y Tank Manager)
+- ✅ Automatización de estados
+- ✅ Integración con Bitly para URLs cortas
+
+---
+
+### **Casos de Uso Escritos (Resumen)**
+
+#### **Caso de Uso 1: Venta con Tank Existente**
+
+1. Crear Lead:
+   - Min Price: $5,000
+   - Max Price: $10,000
+   - Desired Capacity: 5000L
+
+2. Convertir Lead → Se crea Opportunity con Tank auto-asignado
+3. Tank Status cambia a "Reserved"
+
+#### **Caso de Uso 2: Venta sin Tank Disponible**
+
+1. Crear Lead:
+   - Min Price: $100
+   - Max Price: $200
+   - Desired Capacity: 100000L (muy grande)
+
+2. Convertir Lead → Se crea Opportunity + Order (pedido)
+3. Order contiene specs deseadas
+
+#### **Caso de Uso 3: Carga Masiva**
+
+1. Abrir Lightning App → Tank Mass Loader
+2. Seleccionar "Tanque Diesel"
+3. Cargar CSV con 50 tanques
+4. Click "Procesar" → 50 tanques creados en < 2 segundos
+
+#### **Caso de Uso 4: Integración Bitly**
+
+1. Crear 1 Tank individualmente desde UI
+2. Esperar 5 segundos (async)
+3. Refrescar → Campo Bitly_Link__c poblado con URL corta
 
 ---
 
@@ -646,43 +714,6 @@ Custom Headers:
 #### **3. Activar Flow**
 
 Setup → Flows → `Lead_to_Opportunity_with_Tank_Match` → Activate
-
----
-
-## 🎥 Demostración
-
-### **Caso de Uso 1: Venta con Tank Existente**
-
-1. Crear Lead:
-   - Min Price: $5,000
-   - Max Price: $10,000
-   - Desired Capacity: 5000L
-
-2. Convertir Lead → Se crea Opportunity con Tank auto-asignado
-3. Tank Status cambia a "Reserved"
-
-### **Caso de Uso 2: Venta sin Tank Disponible**
-
-1. Crear Lead:
-   - Min Price: $100
-   - Max Price: $200
-   - Desired Capacity: 100000L (muy grande)
-
-2. Convertir Lead → Se crea Opportunity + Order (pedido)
-3. Order contiene specs deseadas
-
-### **Caso de Uso 3: Carga Masiva**
-
-1. Abrir Lightning App → Tank Mass Loader
-2. Seleccionar "Tanque Diesel"
-3. Cargar CSV con 50 tanques
-4. Click "Procesar" → 50 tanques creados en < 2 segundos
-
-### **Caso de Uso 4: Integración Bitly**
-
-1. Crear 1 Tank individualmente desde UI
-2. Esperar 5 segundos (async)
-3. Refrescar → Campo Bitly_Link__c poblado con URL corta
 
 ---
 
